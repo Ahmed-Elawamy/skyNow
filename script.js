@@ -45,7 +45,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
 
-    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=db4efef2013e4d28a1201955251708&q=${lat},${lon}&days=3`;
+    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=db4efef2013e4d28a1201955251708&q=${lat},${lon}&days=3`;
 
     // Fetch Forecast API
     fetch(API_URL)
@@ -111,7 +111,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
         yesterdayDate.setDate(yesterdayDate.getDate() - 1);
         const formattedDate = yesterdayDate.toISOString().split("T")[0];
 
-        const HISTORY_URL = `http://api.weatherapi.com/v1/history.json?key=db4efef2013e4d28a1201955251708&q=${lat},${lon}&dt=${formattedDate}`;
+        const HISTORY_URL = `https://api.weatherapi.com/v1/history.json?key=db4efef2013e4d28a1201955251708&q=${lat},${lon}&dt=${formattedDate}`;
 
         fetch(HISTORY_URL)
             .then((res) => res.json())
