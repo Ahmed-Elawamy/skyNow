@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans";
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.container {
+}
+
+.sky {
+    background-color: #b5d6d6;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.rainy-girl {
+    width: 22%;
+    height: auto;
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.date-country {
+    z-index: 2;
+    position: absolute;
+    top: 22%;
+    left: 39%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.clouds {
+    position: absolute;
+    width: 120%;
+    height: auto;
+    top: 70%;
+    left: -10%;
+}
+
+.ds {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 12%;
+}
+
+.day-of-week {
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.rains {
+    position: absolute;
+    opacity: 0.8;
+}
+
+.temperature-one {
+    font-weight: bold;
+    font-size: 27px;
+    z-index: 4;
+    position: absolute;
+    top: 24%;
+    left: 61%;
+    transform: translateX(-50%);
+    color: #474747;
+    display: flex;
+    height: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .rainy-girl { width: 12%; top: 30%; }
+    .date-country { top: 12%; }
+    .temperature-one { width: 8%; top: 35%; }
+    .clouds { width: 130%; left: -15%; top: 50%; }
+    .ds { top: 55%; }
+}
+
+@media (max-width: 480px) {
+    .rainy-girl { width: 15%; top: 25%; }
+    .date-country { top: 8%; }
+    .temperature-one { width: 10%; top: 30%; }
+    .clouds { width: 140%; left: -20%; top: 45%; }
+    .ds { top: 50%; width: 30%; }
+}
+
+/* Days Section */
+.temp {
+    background-color: #e5f1f1;
+}
+
+.content {
+    position: relative;
+    background-color: white;
+    border-radius: 60px 60px 0 0;
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0 0 0;
+}
+
+.days button {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 11% !important;
+    height: 5% !important;
+}
+
+.days .active {
+    color: #474747;
+    background-color: #e5f2f2;
+    border-radius: 6px;
+}
+
+.days .today {
+    cursor: pointer;
+    width: 63px;
+    height: 22px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.day-weather {
+    gap: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 74px;
+    display: flex;
+    background-color: #e5f2f2;
+    height: 150px;
+    gap: 16px;
+    border-radius: 44px;
+    border-width: 1px;
+    padding: 28px 22px;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.box:hover {
+    background: #fee68b;
+}
+
+.box .hours {
+    width: 38px;
+    height: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #474747;
+}
+
+.box .temperature-two {
+    color: #474747;
+    width: 35px;
+    height: 16px;
+}
+
+button:focus-visible {
+    outline: none;
+}
