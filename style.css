@@ -25,7 +25,7 @@ body {
     width: 22%;
     height: auto;
     position: absolute;
-    top: 29%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -33,15 +33,17 @@ body {
 .date-country {
     z-index: 2;
     position: absolute;
-    top: 22%;
-    left: 39%;
+    top: 20%;
+    left: 33%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
 }
-
+.date-country div {
+    font-weight: 500;
+}
 .clouds {
     position: absolute;
     width: 120%;
@@ -58,16 +60,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 12%;
 }
 
 .day-of-week {
     font-size: 1.5rem;
+    font-weight: 700;
+    color: #474747;
 }
 
 .description {
     font-size: 1.2rem;
     width: 100%;
+    color: #474747;
+    font-weight: 400;
 }
 
 .rains {
@@ -76,12 +81,12 @@ body {
 }
 
 .temperature-one {
+    top: 23%;
+    left: 67%;
     font-weight: bold;
     font-size: 27px;
     z-index: 4;
     position: absolute;
-    top: 24%;
-    left: 61%;
     transform: translateX(-50%);
     color: #474747;
     display: flex;
@@ -92,19 +97,68 @@ body {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .rainy-girl { width: 12%; top: 30%; }
-    .date-country { top: 12%; }
-    .temperature-one { width: 8%; top: 35%; }
-    .clouds { width: 130%; left: -15%; top: 50%; }
-    .ds { top: 55%; }
-}
+    .rainy-girl {
+        width: 34%;
+        top: 26%;
+    }
 
+    .date-country {
+        top: 12%;
+    }
+    .temperature-one {
+        width: 23%;
+        top: 16%;
+    }
+    .clouds {
+        width: 130%;
+        left: -15%;
+        top: 65%;
+    }
+    .ds {
+        top: 78%;
+    }
+    .day-of-week {
+        font-size: 2.3rem;
+    }
+    .description {
+        line-height: 1.1;
+        font-size: 1.9rem;
+    }
+    .days button {
+        width: 20% !important;
+    }
+}
 @media (max-width: 480px) {
-    .rainy-girl { width: 15%; top: 25%; }
-    .date-country { top: 8%; }
-    .temperature-one { width: 10%; top: 30%; }
-    .clouds { width: 140%; left: -20%; top: 45%; }
-    .ds { top: 50%; width: 30%; }
+    .rainy-girl {
+        width: 53%;
+        top: 44%;
+    }
+    .date-country {
+        top: 9%;
+    }
+    .temperature-one {
+        width: 40%;
+        top: 12%;
+        left: 70%;
+    }
+    .clouds {
+        left: -20%;
+        width: 151%;
+        top: 78%;
+    }
+    .ds {
+        top: 84%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+    }
+    .days {
+        padding: 10px 0 0 0;
+    }
+    .days button {
+        width: 30% !important;
+        height: auto !important;
+    }
 }
 
 /* Days Section */
@@ -130,8 +184,10 @@ body {
     font-size: 18px;
     cursor: pointer;
     transition: 0.5s;
-    width: 11% !important;
-    height: 5% !important;
+    /* width: 11% !important;
+    height: 5% !important; */
+    width: 11%;
+    height: 5%;
 }
 
 .days .active {
